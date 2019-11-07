@@ -37,11 +37,12 @@ Escalation Policy Backend DBA: Inara Serra (martin+book@pagerduty.com) is curren
 
 ### Sample Output:
 
-| User Email,User Name,Team Names,Emails,Phone Numbers,SMS Numbers,Push Destinations,Rules: Low,Rules: High                                                          | 
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
-| marketingevents@example.com,Abel Marshall,"Operations, Helpdesk, Security, Customer Experience, Major All Hands, Support, Engineering, Service Desk",2,2,4,1,1,9 | 
-| adela.cervantsz@example.com,Adela Cervantsz,"Operations, Security, Customer Experience, Engineering",1,0,0,0,1,1                                                   | 
-| aileen.mottern@example.com,Aileen Mottern,"Operations, Helpdesk, Security, Engineering, DevOps - Tools, Service Desk",1,0,0,0,1,1                                  | 
-| alejandra.prenatt@example.com,Alejandra Prenatt,"Operations, Helpdesk, Security, Major All Hands",1,0,0,0,1,1                                                      | 
-| alene.rabeck@example.com,Alene Rabeck,"Operations, Helpdesk, Security, Customer Experience, Major All Hands, Engineering",1,0,0,0,1,1                              | 
-
+| User Email                    | User Name                | Team Names                                                                                               | Emails | Phone Numbers | SMS Numbers | Push Destinations | Rules: Low | Rules: High |
+| ----------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------- | ------ | ------------- | ----------- | ----------------- | ---------- | ----------- |
+| marketingevents@pagerduty.com | Abel Marshall            | Operations, Helpdesk, Security, Customer Experience, Major All Hands, Support, Engineering, Service Desk | 2      | 2             | 4           | 1                 | 1          | 9           |
+| adela.cervantsz@example.com   | Adela Cervantsz          | Operations, Security, Customer Experience, Engineering                                                   | 1      | 0             | 0           | 0                 | 1          | 1           |
+| aileen.mottern@example.com    | Aileen Mottern           | Operations, Helpdesk, Security, Engineering, DevOps - Tools, Service Desk                                | 1      | 0             | 0           | 0                 | 1          | 1           |
+| alejandra.prenatt@example.com | Alejandra Prenatt        | Operations, Helpdesk, Security, Major All Hands                                                          | 1      | 0             | 0           | 0                 | 1          | 1           |
+| alene.rabeck@example.com      | Alene Rabeck             | Operations, Helpdesk, Security, Customer Experience, Major All Hands, Engineering                        | 1      | 0             | 0           | 0                 | 1          | 1           |
+| alfonso.griglen@example.com   | Alfonso Griglen          | Security, Major All Hands, Engineering                                                                   | 1      | 0             | 0           | 1                 | 1          | 2           |
+|                               |
