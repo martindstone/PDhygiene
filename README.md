@@ -11,7 +11,8 @@ Scripts to show information about response health
 
 ## Usage:
 
-### Show Escalation Policies where the same person is currently on call at multiple levels:
+### Show Escalation Policies where the same person is currently on call at multiple levels,
+### and show Schedules with coverage gaps:
 
 `python ./hygiene.py pd_api_key`
 
@@ -20,13 +21,64 @@ Scripts to show information about response health
 ```
 Getting Escalation policies... Got 21.
 
-Escalation Policy Backend DBA: Malcolm Reynolds (martin+inara@pagerduty.com) is currently on call at multiple levels:
-    Level 1: Mon Oct 28 00:00:00 2019 - Sat Nov  2 00:00:00 2019
-    Level 3: Mon Oct 28 06:00:00 2019 - Sat Nov  2 06:00:00 2019
+Escalation Policy Backend DBA (https://example.pagerduty.com/escalation_policies/PXXXXXX):
+    Jayne Cobb (martin+inara@pagerduty.com) is currently on call at multiple levels:
+        Level 2: Mon Jan 13 00:00:00 2020 - Sat Jan 18 00:00:00 2020
+        Level 3: Mon Jan 13 00:00:00 2020 - Sat Jan 18 00:00:00 2020
+Escalation Policy Backend DevOps (https://example.pagerduty.com/escalation_policies/PXXXXXX):
+    Malcolm Reynolds (martin+jayne@pagerduty.com) is currently on call at multiple levels:
+        Level 1: Tue Jan 14 09:00:00 2020 - Wed Jan 15 09:00:00 2020
+        Level 3: Tue Jan 14 09:00:00 2020 - Wed Jan 15 09:00:00 2020
+Escalation Policy Backend DevOps (https://example.pagerduty.com/escalation_policies/PXXXXXX):
+    Jayne Cobb (martin+book@pagerduty.com) is currently on call at multiple levels:
+        Level 2: Tue Jan 14 09:00:00 2020 - Wed Jan 15 09:00:00 2020
+        Level 3: Tue Jan 14 09:00:00 2020 - Wed Jan 15 09:00:00 2020
+Escalation Policy Event Sender (https://example.pagerduty.com/escalation_policies/PXXXXXX) has only 1 rule.
+Escalation Policy SN:Database (https://example.pagerduty.com/escalation_policies/PXXXXXX) has only 1 rule.
+Escalation Policy Unusual EP (https://example.pagerduty.com/escalation_policies/PXXXXXX) has only 1 rule.
 
-Escalation Policy Backend DBA: Inara Serra (martin+book@pagerduty.com) is currently on call at multiple levels:
-    Level 2: Mon Oct 28 00:00:00 2019 - Sat Nov  2 00:00:00 2019
-    Level 3: Always on call
+
+Getting Schedules... Got 19.
+
+
+Schedule SN-CAB Approval (https://example.pagerduty.com/schedules/PXXXXXX) has only 0.0% coverage
+Schedule SN-Capacity Mgmt (https://example.pagerduty.com/schedules/PXXXXXX) has only 0.0% coverage
+Schedule SN-Change Management (https://example.pagerduty.com/schedules/PXXXXXX) has only 0.0% coverage
+Schedule Sparse - Inara (https://example.pagerduty.com/schedules/PXXXXXX) has only 37.5% coverage
+    Gaps:
+        Tue Jan 14 22:53:35 2020 - Wed Jan 15 04:00:00 2020
+        Wed Jan 15 13:00:00 2020 - Thu Jan 16 04:00:00 2020
+        Thu Jan 16 13:00:00 2020 - Fri Jan 17 04:00:00 2020
+        Fri Jan 17 13:00:00 2020 - Sat Jan 18 04:00:00 2020
+        Sat Jan 18 13:00:00 2020 - Sun Jan 19 04:00:00 2020
+        Sun Jan 19 13:00:00 2020 - Mon Jan 20 04:00:00 2020
+        Mon Jan 20 13:00:00 2020 - Tue Jan 21 04:00:00 2020
+        Tue Jan 21 13:00:00 2020 - Wed Jan 22 04:00:00 2020
+        Wed Jan 22 13:00:00 2020 - Thu Jan 23 04:00:00 2020
+        Thu Jan 23 13:00:00 2020 - Fri Jan 24 04:00:00 2020
+        Fri Jan 24 13:00:00 2020 - Sat Jan 25 04:00:00 2020
+        Sat Jan 25 13:00:00 2020 - Sun Jan 26 04:00:00 2020
+        Sun Jan 26 13:00:00 2020 - Mon Jan 27 04:00:00 2020
+        Mon Jan 27 13:00:00 2020 - Tue Jan 28 04:00:00 2020
+        Tue Jan 28 13:00:00 2020 - Tue Jan 28 22:53:35 2020
+Schedule Sparse - Jayne (https://example.pagerduty.com/schedules/PXXXXXX) has only 33.3% coverage
+    Gaps:
+        Tue Jan 14 22:53:35 2020 - Wed Jan 15 09:00:00 2020
+        Wed Jan 15 17:00:00 2020 - Thu Jan 16 09:00:00 2020
+        Thu Jan 16 17:00:00 2020 - Fri Jan 17 09:00:00 2020
+        Fri Jan 17 17:00:00 2020 - Sat Jan 18 09:00:00 2020
+        Sat Jan 18 17:00:00 2020 - Sun Jan 19 09:00:00 2020
+        Sun Jan 19 17:00:00 2020 - Mon Jan 20 09:00:00 2020
+        Mon Jan 20 17:00:00 2020 - Tue Jan 21 09:00:00 2020
+        Tue Jan 21 17:00:00 2020 - Wed Jan 22 09:00:00 2020
+        Wed Jan 22 17:00:00 2020 - Thu Jan 23 09:00:00 2020
+        Thu Jan 23 17:00:00 2020 - Fri Jan 24 09:00:00 2020
+        Fri Jan 24 17:00:00 2020 - Sat Jan 25 09:00:00 2020
+        Sat Jan 25 17:00:00 2020 - Sun Jan 26 09:00:00 2020
+        Sun Jan 26 17:00:00 2020 - Mon Jan 27 09:00:00 2020
+        Mon Jan 27 17:00:00 2020 - Tue Jan 28 09:00:00 2020
+        Tue Jan 28 17:00:00 2020 - Tue Jan 28 22:53:35 2020
+
 ```
 
 ## Usage:
