@@ -11,8 +11,7 @@ Scripts to show information about response health
 
 ## Usage:
 
-### Show Escalation Policies where the same person is currently on call at multiple levels,
-### and show Schedules with coverage gaps:
+### Show Escalation Policies where the same person is currently on call at multiple levels, and show Schedules with coverage gaps:
 
 `python ./hygiene.py pd_api_key`
 
